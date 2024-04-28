@@ -8,3 +8,4 @@ kofi
 buymeacoffee
 imsmhjde
 Retryable
+automerge
