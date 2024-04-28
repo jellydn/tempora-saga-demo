@@ -16,20 +16,20 @@
     "dev": "run-p -l server:dev start:dev"
   },
   "dependencies": {
-    "@temporalio/activity": "^1.9.3",
-    "@temporalio/client": "^1.9.3",
-    "@temporalio/worker": "^1.9.3",
-    "@temporalio/workflow": "^1.9.3",
-    "cuid": "^2.1.8"
+    "@temporalio/activity": "1.9.3",
+    "@temporalio/client": "1.9.3",
+    "@temporalio/worker": "1.9.3",
+    "@temporalio/workflow": "1.9.3",
+    "cuid": "2.1.8"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
-    "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^20.12.7",
-    "npm-run-all2": "^6.1.2",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.3",
-    "typescript": "^5.4.5",
-    "wait-on": "^7.2.0"
+    "@tsconfig/node20": "20.1.4",
+    "@types/node": "20.12.7",
+    "npm-run-all2": "6.1.2",
+    "tsup": "8.0.2",
+    "tsx": "4.7.3",
+    "typescript": "5.4.5",
+    "wait-on": "7.2.0"
   }
 }
