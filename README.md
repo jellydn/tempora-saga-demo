@@ -1,9 +1,6 @@
 <h1 align="center">Welcome to saga pattern demo 👋</h1>
-<p>
-  <a href="https://www.bunjs.com/package/saga" target="_blank">
-    <img alt="Version" src="https://img.shields.io/bun/v/saga.svg">
-  </a>
-</p>
+
+> Saga pattern demo with Temporal
 
 ## Pre-requisites
 
