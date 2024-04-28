@@ -1,4 +1,4 @@
-import { BoundedContextClients } from './clients';
+import type { BoundedContextClients } from './clients'
 
 // createActivities just returns client implementations directly right now, but later might decorate
 export function createActivities(clients: BoundedContextClients) {
@@ -13,5 +13,5 @@ export function createActivities(clients: BoundedContextClients) {
 
     addAddress: clients.postOffice.addAddress.bind(clients.postOffice),
     clearPostalAddresses: clients.postOffice.clearPostalAddresses.bind(clients.postOffice),
-  };
+  }
 }

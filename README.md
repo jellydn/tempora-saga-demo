@@ -1,76 +1,65 @@
-# Saga
+<h1 align="center">Welcome to saga pattern demo 👋</h1>
+<p>
+  <a href="https://www.bunjs.com/package/saga" target="_blank">
+    <img alt="Version" src="https://img.shields.io/bun/v/saga.svg">
+  </a>
+</p>
 
-This sample demonstrates orchestrating microservices using a very simplistic Saga pattern.
+## Pre-requisites
 
-## Use Case
+- [Temporal CLI](https://temporal.io)
+- [Bun](https://bun.sh) or [Node.js](https://nodejs.org/en/download/)
 
-The `openAccount` Workflow opens a new bank account. It coordinates between the Clients, Accounts, Banking, and
-PostOffice services. In this example, the service clients _are_ Activities being orchestrated.
+## Install
 
-When one of the Activities fails, the Workflow will "compensate" by calling Activities configured
-as reversals of successful calls to that point. Note that compensation is done in reverse order.
-
-### Running this sample
-
-1. Either use Temporal Cloud with environment variables specified [here](https://docs.temporal.io/security/#encryption-in-transit-with-mtls) or make sure Temporal Server is running locally (see the [quick install guide](https://docs.temporal.io/dev-guide/typescript/foundations#run-a-development-server)) and add `LOCAL=true`.
-1. `npm install` to install dependencies.
-1. `LOCAL=true npm run start` to start the Worker.
-1. In another shell, `LOCAL=true npm run workflow` to run the Workflow.
-1. In the first shell, watch the Worker output for a few seconds:
-
-```
-2022-05-17T19:34:32.102Z [INFO] Worker state changed { state: 'RUNNING' }
-CREATING ACCOUNT { accountId: 'cl3ak0irb0000imsmhjde2x5f' }
-ADDING ADDRESS {
-  accountId: 'cl3ak0irb0000imsmhjde2x5f',
-  address: { address1: '123 Temporal Street', postalCode: '98006' }
-}
-ADDING CLIENT {
-  accountId: 'cl3ak0irb0000imsmhjde2x5f',
-  clientEmail: 'bart@simpson.io'
-}
-workflow:  f508b554-3606-44e8-a460-97a47f0224e4 message:  add bank account failed:
-workflow:  f508b554-3606-44e8-a460-97a47f0224e4 message:  failures encountered during account opening - compensating
-workflow:  f508b554-3606-44e8-a460-97a47f0224e4 message:  reversing add client:
-REMOVING CLIENT { accountId: 'cl3ak0irb0000imsmhjde2x5f' }
-workflow:  f508b554-3606-44e8-a460-97a47f0224e4 message:  reversing add address:
-CLEARING ADDRESSES { accountId: 'cl3ak0irb0000imsmhjde2x5f' }
+```sh
+bun install
 ```
 
-1. In the other shell, where the client code is running (`LOCAL=true npm run workflow`).
+## Usage
+
+```sh
+bun run dev
+```
+
+## Development
+
+### To begin development, install the Temporal CLI:
+
+Mac: `brew install temporal`
+Other: Download and extract the latest release from https://github.com/temporalio/cli/releases/latest
+
+### Start Temporal Server:
 
 ```
-> saga@0.1.0 workflow
-> ts-node src/client.ts
-
-account failed to open WorkflowFailedError: Workflow execution failed
-    at WorkflowClient.result (/Users/me/gh/samples-typescript/saga/node_modules/@temporalio/client/src/workflow-client.ts:457:15)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async run (/Users/me/gh/samples-typescript/saga/src/client.ts:39:3) {
-  cause: [TemporalFailure: Activity execution failed] {
-    cause: Error: add bank account failed:
-        at Activity.addBankAccount [as fn] (/Users/me/gh/samples-typescript/saga/src/clients/index.ts:30:13) {
-      cause: undefined,
-      name: 'ApplicationFailure',
-      type: 'Error',
-      nonRetryable: false,
-      details: [],
-      failure: [Object]
-    },
-    activityType: 'addBankAccount',
-    activityId: '4',
-    retryState: 3,
-    identity: '35653@mbp-2.local',
-    failure: {
-      message: 'Activity task failed',
-      cause: [Object],
-      activityFailureInfo: [ActivityFailureInfo],
-      applicationFailureInfo: undefined,
-      timeoutFailureInfo: undefined,
-      canceledFailureInfo: undefined,
-      resetWorkflowFailureInfo: undefined
-    }
-  },
-  retryState: 5
-}
+temporal server start:dev
 ```
+
+## Then, in the project directory, using two other shells, run these commands:
+
+```sh
+bun run start:watch
+bun run start:workflow
+```
+
+## Resources
+
+- [Saga pattern made easy](https://pages.temporal.io/rs/250-WIU-007/images/tech-guide-saga-pattern-made-easy.pdf)
+
+## Author
+
+👤 **Dung Huynh**
+
+- Website: https://productsway.com/
+- Twitter: [@jellydn](https://twitter.com/jellydn)
+- Github: [@jellydn](https://github.com/jellydn)
+
+## Show your support
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jellydn/moleculer-typescript-template&type=Date)](https://star-history.com/#jellydn/moleculer-typescript-template)
+
+Give a ⭐️ if this project helped you!
+
+[![kofi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/dunghd)
+[![paypal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/dunghd)
+[![buymeacoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/dunghd)

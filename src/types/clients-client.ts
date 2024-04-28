@@ -1,6 +1,6 @@
-import * as Commands from './commands';
+import type * as Commands from './commands'
 
 export interface Client {
-  addClient(params: Commands.AddClient): Promise<void>;
-  removeClient(params: Commands.RemoveClient): Promise<void>;
+  addClient(params: Commands.AddClient): Promise<void>
+  removeClient(params: Commands.RemoveClient): Promise<void>
 }

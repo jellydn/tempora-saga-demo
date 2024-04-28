@@ -1,43 +1,35 @@
 {
-  "name": "saga",
+  "name": "saga-pattern-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsc --build",
-    "build.watch": "tsc --build --watch",
-    "lint": "eslint .",
-    "start": "ts-node src/worker.ts",
-    "start.watch": "nodemon src/worker.ts",
-    "workflow": "ts-node src/client.ts"
-  },
-  "nodemonConfig": {
-    "execMap": {
-      "ts": "ts-node"
-    },
-    "ext": "ts",
-    "watch": [
-      "src"
-    ]
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "check": "biome check --apply .",
+    "format": "biome format . --write",
+    "lint": "biome lint .",
+    "server:dev": "temporal server start-dev",
+    "start": "tsx src/worker.ts",
+    "start:dev": "wait-on -d 1000 -l tcp:8233 && run-p -l start:watch start:workflow",
+    "start:watch": "tsx watch src/worker.ts",
+    "start:workflow": "tsx src/client.ts",
+    "dev": "run-p -l server:dev start:dev"
   },
   "dependencies": {
-    "@temporalio/activity": "^1.9.0",
-    "@temporalio/client": "^1.9.0",
-    "@temporalio/worker": "^1.9.0",
-    "@temporalio/workflow": "^1.9.0",
+    "@temporalio/activity": "^1.9.3",
+    "@temporalio/client": "^1.9.3",
+    "@temporalio/worker": "^1.9.3",
+    "@temporalio/workflow": "^1.9.3",
     "cuid": "^2.1.8"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^1.0.0",
-    "@types/node": "^16.11.43",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-deprecation": "^1.2.1",
-    "nodemon": "^2.0.12",
-    "prettier": "^2.8.8",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.2"
+    "@biomejs/biome": "1.7.1",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.12.7",
+    "npm-run-all2": "^6.1.2",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5",
+    "wait-on": "^7.2.0"
   }
 }
