@@ -42,6 +42,8 @@ bun run start:watch
 bun run start:workflow
 ```
 
+More detail on [saga](./saga.md).
+
 ## Resources
 
 - [Saga pattern made easy](https://pages.temporal.io/rs/250-WIU-007/images/tech-guide-saga-pattern-made-easy.pdf)
@@ -55,8 +57,6 @@ bun run start:workflow
 - Github: [@jellydn](https://github.com/jellydn)
 
 ## Show your support
-
-[![Star History Chart](https://api.star-history.com/svg?repos=jellydn/moleculer-typescript-template&type=Date)](https://star-history.com/#jellydn/moleculer-typescript-template)
 
 Give a ⭐️ if this project helped you!
 
