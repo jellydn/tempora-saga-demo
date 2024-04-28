@@ -20,7 +20,7 @@
     "@temporalio/client": "^1.9.3",
     "@temporalio/worker": "^1.9.3",
     "@temporalio/workflow": "^1.9.3",
-    "cuid": "^2.1.8"
+    "cuid": "^3.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.1",
