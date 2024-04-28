@@ -9,3 +9,4 @@ buymeacoffee
 imsmhjde
 Retryable
 automerge
+paralleldrive

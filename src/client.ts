@@ -1,5 +1,5 @@
+import { createId } from '@paralleldrive/cuid2'
 import { Client, Connection } from '@temporalio/client'
-import cuid from 'cuid'
 import type * as Workflows from './types/workflow-commands'
 import { openAccount as openAccountWorkflow } from './workflows'
 async function run() {
@@ -10,13 +10,13 @@ async function run() {
   })
   // workflow params
   const openAccount: Workflows.OpenAccount = {
-    accountId: cuid(),
+    accountId: createId(),
     address: {
       address1: '123 Temporal Street',
       postalCode: '98006',
     },
     bankDetails: {
-      accountNumber: cuid(),
+      accountNumber: createId(),
       routingNumber: '1234555',
       accountType: 'Checking',
       personalOwner: {
