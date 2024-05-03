@@ -10,8 +10,8 @@
     "lint": "biome lint .",
     "server:dev": "temporal server start-dev",
     "start": "tsx src/worker.ts",
-    "start:dev": "wait-on -d 1000 -l tcp:8233 && run-p -l start:watch start:workflow",
-    "start:watch": "tsx watch src/worker.ts",
+    "start:dev": "wait-on -d 1000 -l tcp:8233 && run-p -l start:workflow start:worker",
+    "start:worker": "tsx watch src/worker.ts",
     "start:workflow": "tsx src/client.ts",
     "dev": "run-p -l server:dev start:dev"
   },

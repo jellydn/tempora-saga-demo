@@ -12,11 +12,12 @@ as reversals of successful calls to that point. Note that compensation is done i
 
 ### Running this sample
 
-1. Either use Temporal Cloud with environment variables specified [here](https://docs.temporal.io/security/#encryption-in-transit-with-mtls) or make sure Temporal Server is running locally (see the [quick install guide](https://docs.temporal.io/dev-guide/typescript/foundations#run-a-development-server)) and add `LOCAL=true`.
-1. `bun install` to install dependencies.
-1. `LOCAL=true bun run start` to start the Worker.
-1. In another shell, `LOCAL=true bun run workflow` to run the Workflow.
-1. In the first shell, watch the Worker output for a few seconds:
+Either use Temporal Cloud with environment variables specified [here](https://docs.temporal.io/security/#encryption-in-transit-with-mtls) or make sure Temporal Server is running locally (see the [quick install guide](https://docs.temporal.io/dev-guide/typescript/foundations#run-a-development-server)) and add `LOCAL=true`.
+
+- `bun install` to install dependencies.
+- `LOCAL=true bun run start:worker` to start the Worker.
+- In another shell, `LOCAL=true bun run start:workflow` to run the Workflow.
+- In the first shell, watch the Worker output for a few seconds:
 
 ```sh
 2022-05-17T19:34:32.102Z [INFO] Worker state changed { state: 'RUNNING' }
