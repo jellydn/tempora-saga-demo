@@ -8,7 +8,7 @@ async function run() {
   const connection = await Connection.connect()
   const client = new Client({
     connection,
-    // In production you will likely specify `namespace` here; it is 'default' if omitted
+    namespace: process.env.TEMPORAL_NAMESPACE || 'default',
   })
   // workflow params
   const openAccount: Workflows.OpenAccount = {
