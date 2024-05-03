@@ -1,4 +1,5 @@
 import { Worker, type WorkerOptions } from '@temporalio/worker'
+
 import { createActivities } from './activities'
 import { createClients } from './clients'
 

@@ -1,7 +1,9 @@
 import { createId } from '@paralleldrive/cuid2'
 import { Client, Connection } from '@temporalio/client'
+
 import type * as Workflows from './types/workflow-commands'
 import { openAccount as openAccountWorkflow } from './workflows'
+
 async function run() {
   const connection = await Connection.connect()
   const client = new Client({
@@ -30,7 +32,7 @@ async function run() {
 
   // Here is how we start our workflow
   const handle = await client.workflow.start(openAccountWorkflow, {
-    taskQueue: 'saga-demo',
+    taskQueue: process.env.TEMPORAL_TASK_QUEUE || 'saga-pattern-demo',
     workflowId: 'saga-' + openAccount.accountId,
     args: [openAccount],
   })

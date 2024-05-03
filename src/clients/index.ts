@@ -1,4 +1,5 @@
 import { log } from '@temporalio/activity'
+
 import type * as Accounts from '../types/accounts-client'
 import type * as Banking from '../types/banking-client'
 import type * as Clients from '../types/clients-client'
