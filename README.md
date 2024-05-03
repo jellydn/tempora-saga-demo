@@ -32,12 +32,20 @@ Other: Download and extract the latest release from https://github.com/temporali
 temporal server start:dev
 ```
 
+### Start the Temporal Web UI:
+
+Open browser to http://localhost:8233 to see the Temporal Web UI.
+
 ## Then, in the project directory, using two other shells, run these commands:
 
 ```sh
-bun run start:watch
+bun run start:worker
 bun run start:workflow
 ```
+
+[![Demo](https://i.gyazo.com/bba64c9034d3187d366160537e8501f7.gif)](https://gyazo.com/bba64c9034d3187d366160537e8501f7)
+
+[Here is an example output with `bun run dev`.](https://app.warp.dev/block/wjvnUWFaLj41XulMLsH2J7)
 
 More detail on [saga](./saga.md).
 
