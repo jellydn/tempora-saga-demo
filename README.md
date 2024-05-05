@@ -52,6 +52,8 @@ More detail on [saga](./saga.md).
 ## Resources
 
 - [Saga pattern made easy](https://pages.temporal.io/rs/250-WIU-007/images/tech-guide-saga-pattern-made-easy.pdf)
+- [Saga pattern - Azure Design Patterns | Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)
+- [Pattern: Saga](https://microservices.io/patterns/data/saga.html)
 
 ## Author
 
