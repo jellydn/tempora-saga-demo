@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "2.2.2",
-    "@temporalio/activity": "1.10.0",
-    "@temporalio/client": "1.10.0",
-    "@temporalio/worker": "1.10.0",
-    "@temporalio/workflow": "1.10.0"
+    "@temporalio/activity": "1.10.1",
+    "@temporalio/client": "1.10.1",
+    "@temporalio/worker": "1.10.1",
+    "@temporalio/workflow": "1.10.1"
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
