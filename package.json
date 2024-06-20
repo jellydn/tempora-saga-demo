@@ -25,11 +25,11 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.2",
     "@tsconfig/node20": "20.1.4",
-    "@types/node": "20.14.6",
+    "@types/node": "20.14.7",
     "npm-run-all2": "6.2.0",
     "tsup": "8.1.0",
     "tsx": "4.15.6",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "wait-on": "7.2.0"
   }
 }
