@@ -17,19 +17,19 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "2.2.2",
-    "@temporalio/activity": "1.10.1",
-    "@temporalio/client": "1.10.1",
-    "@temporalio/worker": "1.10.1",
-    "@temporalio/workflow": "1.10.1"
+    "@temporalio/activity": "1.10.3",
+    "@temporalio/client": "1.10.3",
+    "@temporalio/worker": "1.10.3",
+    "@temporalio/workflow": "1.10.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@tsconfig/node20": "20.1.4",
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.14",
     "npm-run-all2": "6.2.2",
-    "tsup": "8.1.0",
-    "tsx": "4.16.2",
-    "typescript": "5.5.3",
+    "tsup": "8.2.4",
+    "tsx": "4.17.0",
+    "typescript": "5.5.4",
     "wait-on": "7.2.0"
   }
 }
