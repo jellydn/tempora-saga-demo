@@ -19,6 +19,10 @@ bun install
 bun run dev
 ```
 
+## Saga Pattern
+
+![Saga Pattern](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7ead610b-d0c7-41a6-aa16-4ad86534f65f_1503x1600.png)
+
 ## Development
 
 ### To begin development, install the Temporal CLI:
@@ -54,6 +58,7 @@ More detail on [saga](./saga.md).
 - [Saga pattern made easy](https://pages.temporal.io/rs/250-WIU-007/images/tech-guide-saga-pattern-made-easy.pdf)
 - [Saga pattern - Azure Design Patterns | Microsoft Learn](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/saga/saga)
 - [Pattern: Saga](https://microservices.io/patterns/data/saga.html)
+- [The Saga Pattern - ByteByteGo Newsletter](https://blog.bytebytego.com/p/the-saga-pattern)
 
 ## Author
 
