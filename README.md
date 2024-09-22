@@ -2,6 +2,8 @@
 
 > Saga pattern demo with Temporal
 
+[![IT Man - Simplifying the Saga Pattern: A Easy Guide](https://i.ytimg.com/vi/V3dBUizAo3w/hqdefault.jpg)](https://www.youtube.com/watch?v=V3dBUizAo3w)
+
 ## Pre-requisites
 
 - [Temporal CLI](https://temporal.io)
