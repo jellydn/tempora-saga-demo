@@ -6,7 +6,7 @@
     "build": "tsup",
     "build:watch": "tsup --watch",
     "check": "biome check --apply .",
-    "format": "biome format . --write",
+    "format": "biome format .",
     "lint": "biome lint .",
     "server:dev": "temporal server start-dev",
     "start": "tsx src/worker.ts",
@@ -17,19 +17,19 @@
   },
   "dependencies": {
     "@paralleldrive/cuid2": "2.2.2",
-    "@temporalio/activity": "1.10.1",
-    "@temporalio/client": "1.10.1",
-    "@temporalio/worker": "1.10.1",
-    "@temporalio/workflow": "1.10.1"
+    "@temporalio/activity": "1.11.1",
+    "@temporalio/client": "1.11.1",
+    "@temporalio/worker": "1.11.1",
+    "@temporalio/workflow": "1.11.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.2",
     "@tsconfig/node20": "20.1.4",
-    "@types/node": "20.14.9",
-    "npm-run-all2": "6.2.2",
-    "tsup": "8.1.0",
-    "tsx": "4.16.2",
-    "typescript": "5.5.3",
-    "wait-on": "7.2.0"
+    "@types/node": "22.5.5",
+    "npm-run-all2": "6.2.3",
+    "tsup": "8.3.0",
+    "tsx": "4.19.1",
+    "typescript": "5.6.2",
+    "wait-on": "8.0.1"
   }
 }
