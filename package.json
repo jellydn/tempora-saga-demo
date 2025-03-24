@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@tsconfig/node20": "20.1.4",
-    "@types/node": "22.13.11",
+    "@tsconfig/node20": "20.1.5",
+    "@types/node": "22.13.13",
     "npm-run-all2": "7.0.2",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
