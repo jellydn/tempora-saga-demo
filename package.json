@@ -23,7 +23,7 @@
     "@temporalio/workflow": "1.13.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.2.2",
     "@tsconfig/node20": "20.1.6",
     "@types/node": "22.18.0",
     "npm-run-all2": "7.0.2",
