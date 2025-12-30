@@ -16,7 +16,7 @@
     "dev": "run-p -l server:dev start:dev"
   },
   "dependencies": {
-    "@paralleldrive/cuid2": "2.3.1",
+    "@paralleldrive/cuid2": "3.0.6",
     "@temporalio/activity": "1.14.0",
     "@temporalio/client": "1.14.0",
     "@temporalio/worker": "1.14.0",
